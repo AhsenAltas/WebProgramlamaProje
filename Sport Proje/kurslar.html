@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>Kurslar</title>
+
+	<link rel="shortcut icon" href="assets/images/logo.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/rating.css">
+
+</head>
+
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="main.html"><img src="assets/images/logo.png" alt="Bla Bla Logo"> <i>EKSTREM SPORT </i></a>
+				
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="main.html">Ana Sayfa</a></li>
+					<li class="active"><a href="#">Kurslar</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Spor Dalları <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="spordallari.html">Abseiling</a></li>
+							<li><a href="spordallari.html#BungeeJumping">Bungee Jumping</a></li>
+							<li><a href="spordallari.html#Canyoning">Canyoning</a></li>
+							<li><a href="spordallari.html#DagBisikleti">Dağ Bisikleti</a></li>
+							<li><a href="spordallari.html#Dalis">Dalış</a></li>
+							<li><a href="spordallari.html#Kampcilik">Kampçılık</a></li>
+							<li><a href="spordallari.html#Kayak">Kayak</a></li>
+							<li><a href="spordallari.html#Motokros">Motokros</a></li>
+							<li><a href="spordallari.html#Rafting">Rafting</a></li>
+							<li><a href="spordallari.html#Snowboard">Snowboard</a></li>
+							<li><a href="spordallari.html#Wakeboard">Wakeboard</a></li>
+							<li><a href="spordallari.html#YamacParasutu">Yamaç Paraşütü</a></li>							
+							<li><a href="spordallari.html#Zipline">Zipline</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="topluluklar.html">Topluluklar</a></li>
+					<li><a href="kampanyalar.html">Kampanyalar</a></li>
+					<li><a href="iletisim.html" >İletişim</a></li>
+					<li><a class="btn" href="signin.html">ÜYE GİRİŞİ / ÜYE OL</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+	<header id="head" class="secondary"></header>
+	
+		
+		<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="main.html">Ana Sayfa</a></li>
+			<li class="active">Kurslar</li>
+			
+			<div class="row widget">
+					<div class="col-sm-0 text-right" style="float: right;">
+					<button <input class="btn" type="submit" "><i class="fa fa-search"></i></button>
+				</div>
+				<div class="col-sm-5 " style="float: right;">
+						<input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Spor Dalı ara.." title="Type in a name">
+					</div>
+		
+			</div>
+		</ol>
+	<div class="row">
+			<!-- Article main content -->
+			
+				<header class="page-header">
+					<h1 class="page-title">KURSLAR</h1>
+				<div class="row widget">
+				<div class="col-xs-12">
+						<select id="birthDay" name="birthDay" class="form-control" required="required">
+						<option value="">
+						Önerilen Sıralama
+						</option>
+						<option value="1"  >En yüksek puanlılar</option>
+						<option value="2"  >En çok değerlendirilenler</option>
+						</select>
+					</div>
+				</div>
+				</header>
+    <!-- Project One -->
+    <div class="row">
+
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>Kurs Bir</h3>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <a class="btn btn-primary" href="#">Kursu İncele
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+	<div class="top-margin">
+	<div class="row">
+
+
+		<div id='container' class="col-md-7">
+		<h4 class="page-title">Yorumlar :</h4>
+		
+		</div>
+		
+		<div class="col-md-5">
+		<textarea placeholder="Yorumunuzu buraya yazınız..." id="bodyText" class="form-control" rows="12"></textarea>
+			<div class="rating"> 
+			<input type="radio" name="rating" value="5" id="5">
+			<label for="5">☆</label> 
+			<input type="radio" name="rating" value="4" id="4">
+			<label for="4">☆</label>
+			<input type="radio" name="rating" value="3" id="3">
+			<label for="3">☆</label> 
+			<input type="radio" name="rating" value="2" id="2">
+			<label for="2">☆</label> 
+			<input type="radio" name="rating" value="1" id="1">
+			<label for="1">☆</label>
+			</div>
+							<div>
+								<input class="btn btn-action" id="addComent" type="submit" value="Gönder">
+							</div>
+		</div>
+		</div>
+	</div>
+	
+		<hr>
+
+<div class="row">
+
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>Kurs İki</h3>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star "></span>
+				<span class="fa fa-star"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <a class="btn btn-primary" href="#">Kursu İncele
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+	<div class="top-margin">
+	<div class="row">
+		<div class="col-md-7">
+		<h4 class="page-title">Yorumlar :</h4>
+		
+		</div>
+		
+		<div class="col-md-5">
+		<textarea placeholder="Yorumunuzu buraya yazınız..."   class="form-control" rows="12"></textarea>
+			<div class="rating"> 
+			<input type="radio" name="rating" value="5" id="10">
+			<label for="10">☆</label> 
+			<input type="radio" name="rating" value="4" id="9">
+			<label for="9">☆</label>
+			<input type="radio" name="rating" value="3" id="8">
+			<label for="8">☆</label> 
+			<input type="radio" name="rating" value="2" id="7">
+			<label for="7">☆</label> 
+			<input type="radio" name="rating" value="1" id="6">
+			<label for="6">☆</label>
+			</div>
+							<div>
+								<input class="btn btn-action" type="submit" value="Gönder">
+							</div>
+		</div>
+		</div>
+	</div>
+
+		<hr>
+
+    <div class="row">
+
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>Kurs Üç</h3>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star "></span>
+				<span class="fa fa-star "></span>
+				<span class="fa fa-star "></span>
+				<span class="fa fa-star"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <a class="btn btn-primary" href="#">Kursu İncele
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+	<div class="top-margin">
+	<div class="row">
+		<div class="col-md-7">
+		<h4 class="page-title">Yorumlar :</h4>
+		
+		</div>
+		
+		<div class="col-md-5">
+		<textarea placeholder="Yorumunuzu buraya yazınız..."   class="form-control" rows="12"></textarea>
+			<div class="rating"> 
+			<input type="radio" name="rating" value="5" id="5">
+			<label for="5">☆</label> 
+			<input type="radio" name="rating" value="4" id="4">
+			<label for="4">☆</label>
+			<input type="radio" name="rating" value="3" id="3">
+			<label for="3">☆</label> 
+			<input type="radio" name="rating" value="2" id="2">
+			<label for="2">☆</label> 
+			<input type="radio" name="rating" value="1" id="1">
+			<label for="1">☆</label>
+			</div>
+							<div>
+								<input class="btn btn-action" type="submit" value="Gönder">
+							</div>
+		</div>
+		</div>
+	</div>
+
+		<hr>
+
+	<div class="row">
+
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>Kurs Dört</h3>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <a class="btn btn-primary" href="#">Kursu İncele
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+	<div class="top-margin">
+	<div class="row">
+		<div class="col-md-7">
+		<h4 class="page-title">Yorumlar :</h4>
+		
+		</div>
+		
+		<div class="col-md-5">
+		<textarea placeholder="Yorumunuzu buraya yazınız..."   class="form-control" rows="12"></textarea>
+			<div class="rating"> 
+			<input type="radio" name="rating" value="5" id="5">
+			<label for="5">☆</label> 
+			<input type="radio" name="rating" value="4" id="4">
+			<label for="4">☆</label>
+			<input type="radio" name="rating" value="3" id="3">
+			<label for="3">☆</label> 
+			<input type="radio" name="rating" value="2" id="2">
+			<label for="2">☆</label> 
+			<input type="radio" name="rating" value="1" id="1">
+			<label for="1">☆</label>
+			</div>
+							<div>
+								<input class="btn btn-action" type="submit" value="Gönder">
+							</div>
+		</div>
+		</div>
+	</div>
+
+    <hr>
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- /.container -->
+</div>
+<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">İletişim</h3>
+						<div class="widget-body">
+							<p>+145861451315<br>
+								<a href="mailto:#">biseybisey@biseybisey.com</a><br>
+								<br>
+								Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi Bilgisayar Mühendisliği 3. Sınıf Öğrencileri Web Programlama Proje Ödevi
+							</p>	
+						</div>
+					</div>
+							
+					<div class="col-md-3 widget">
+					<h3 class="widget-title">Ücretsiz İndirin</h3>
+						<li>
+                        <a href=""> <img src="assets/images/appstore.png" alt="&#220;cretsiz İndir!" ></a>
+                        </li>
+                        <li>
+                         <a href=""> <img src="assets/images/playstore.png" alt="&#220;cretsiz İndir!" ></a>
+                         </li>
+                    </div>
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Bizi Takip Edin</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href=""><i class="fa fa-twitter fa-2"></i></a>
+								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+			
+
+			
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Bla Bla Bir Şeyler Bir Şeyler</h3>
+						<div class="widget-body">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
+							<p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="main.html">Ana Sayfa</a> | 
+								<a href="iletisim.html">İletişim</a> |
+								<b><a href="signup.html">Üye Ol</a> / <a href="signin.html">Giriş Yap</a></b>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2020, Bu site designed by Ahsen-Melike-Emine</a> 
+							</p>
+						</div>
+					</div> 
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="assets/js/comments.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	
+
+</body>
+</html>
