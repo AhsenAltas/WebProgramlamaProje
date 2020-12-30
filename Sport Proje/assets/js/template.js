@@ -11,3 +11,20 @@ jQuery(document).ready(function($) {
 	});
 
 });
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.yukarikaydir').fadeIn();
+        } else {
+            $('.yukarikaydir').fadeOut();
+        }
+    });
+
+    $('.yukarikaydir').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+});

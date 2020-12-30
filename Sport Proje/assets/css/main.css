@@ -80,4 +80,23 @@ img.pull-left { margin-right: 10px; }
 		.footer2 p { margin: 0; }
 
 	.widget-simplenav { margin-left:-5px; }		
-	.widget-simplenav a{ margin:0 5px; }		
+	.widget-simplenav a{ margin:0 5px; }	
+	
+
+.yukarikaydir {
+    display:none;
+    background-color:#FF8C00;
+    padding:1em;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    text-decoration:none;
+    color:#000000;
+	border-radius: 50%;
+}	
+
+.yukarikaydir:hover {
+    color: #FF8C00;
+    background-color: #232323;
+    border: 2px solid #FF8C00;
+}	
