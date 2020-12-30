@@ -330,4 +330,4 @@ function render10(data10) {
             });
         });		
 
-function myFunction() { alert("Mesajınız değerlendirmeye alındı!");}
+function myFunction() { alert("Mesajınız gönderildi!");}
