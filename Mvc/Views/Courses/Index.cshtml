@@ -1,0 +1,47 @@
+﻿@*@model IEnumerable<SportProject.Models.Courses>*@
+@model SportProject.Models.CoursesSportsViewModel
+
+@{
+    ViewData["Title"] = "Kurslar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h1 class="thin text-center">@ViewData["Title"]</h1>
+    <ol class="breadcrumb">
+        <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+        <li class="active">Kurslar</li>
+
+    </ol>
+    <form asp-controller="Courses" asp-action="Index" method="get">
+        <p>
+            <select class="form-control" name="CourseBranch" asp-for="CoursesSports" asp-items="Model.Sport">
+                <option value="">Hepsi</option>
+            </select>
+
+
+            Title: <input type="text" class="form-control" name="SearchString">
+            <input type="submit" class="btn btn-action" value="Filter" />
+        </p>
+    </form>
+
+    @foreach (var item in Model.Courses)
+    {
+        <div class="row">
+
+            <div class="col-md-7">
+                <img class="img-fluid rounded mb-3 mb-md-0" src=@Url.Content(item.SiteUrl) asp-append-version="true" alt="">
+            </div>
+            <div class="col-md-5">
+                <h3>@Html.DisplayFor(modelItem => item.CourseName)</h3>
+                <p>@Html.DisplayFor(modelItem => item.InfoCourse)</p>
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@item.CourseId">Kursu İncele</a>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="top-margin">
+            <div class="row">
+            </div>
+        </div>
+    }
+
+</div>

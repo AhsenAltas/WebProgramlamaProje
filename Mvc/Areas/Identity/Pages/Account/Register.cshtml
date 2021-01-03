@@ -1,0 +1,130 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Üye Ol";
+}
+
+<div class="container">
+
+    <ol class="breadcrumb">
+        <li><a  asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+        <li class="active">Üyelik</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Article main content -->
+        <article class="col-xs-12 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">Üye ol</h1>
+            </header>
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="thin text-center">@ViewData["Title"]</h1>
+                        <p class="text-center text-muted">Zaten Ekstrem Sport üyesi misin? <a asp-area="Identity" asp-page="/Account/Login">Giriş yap</a> ve kaldığın yerden devam et!  </p>
+                        <hr>
+
+                        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div class="top-margin">
+                                <label asp-for="Input.Name"></label>
+                                <input asp-for="Input.Name" class="form-control" />
+                                <span asp-validation-for="Input.Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.Surname"></label>
+                                <input asp-for="Input.Surname" class="form-control" />
+                                <span asp-validation-for="Input.Surname" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.Email"></label>
+                                <input asp-for="Input.Email" class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.Tel"></label>
+                                <input asp-for="Input.Tel" class="form-control" />
+                                <span asp-validation-for="Input.Tel" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.Birthdate"></label>
+                                <input asp-for="Input.Birthdate" class="form-control" />
+                                <span asp-validation-for="Input.Birthdate" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.Password"></label>
+                                <input asp-for="Input.Password" class="form-control" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="top-margin">
+                                <label asp-for="Input.ConfirmPassword"></label>
+                                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                            </div>
+
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <label class="checkbox">
+                                        <input type="checkbox" required><span class="text-danger">*</span>
+                                        <a target='_blank' asp-controller="Home" asp-action="Privacy">Üyelik Sözleşmesi</a> şartlarını okudum ve kabul ediyorum.
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        Tarafımla pazarlama ve tanıtım amaçlı iletişime geçilmesine izin veriyorum.
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button type="submit" class="btn btn-action">Üye ol</button>
+                                </div>
+                                <div class="col-lg-4 text-muted">
+                                    * işaretli alanların doldurulması zorunludur.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+        <div class="col-lg-8">
+            <section>
+                @{
+                    if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                    {
+                        <div>
+                            <p>
+                            </p>
+                        </div>
+                    }
+                    else
+                    {
+                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="">
+                            <div>
+                                <p>
+                                    @foreach (var provider in Model.ExternalLogins)
+                                    {
+                                        <button type="submit" class="btn btn-action" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                    }
+                                </p>
+                            </div>
+                        </form>
+                    }
+                }
+            </section>
+        </div>
+    </div>
+</div>	 
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

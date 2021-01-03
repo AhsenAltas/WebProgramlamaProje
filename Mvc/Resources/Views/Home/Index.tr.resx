@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnaBaslik" xml:space="preserve">
+    <value>Spor kurslarına bugün başla.</value>
+  </data>
+  <data name="AnaParagraf" xml:space="preserve">
+    <value>Binlerce çeşit spor ve spor kursu ile aralarından kendine en uygun olanı bul.</value>
+  </data>
+  <data name="Deneme" xml:space="preserve">
+    <value>Deneme123</value>
+  </data>
+  <data name="Firsatlar" xml:space="preserve">
+    <value>Ekstrem Sport'a özel kampanyalar ve kaçırılmayacak fırsatlar hakkında daha fazlasını öğren! Çeşitli kurslarda %50'ye varan indirimleri ve erken kayıtlara özel fırsatları kaçırma!</value>
+  </data>
+  <data name="GirisBaslik" xml:space="preserve">
+    <value>SPOR, SAĞLIK, YAŞAM</value>
+  </data>
+  <data name="GirisParagraf" xml:space="preserve">
+    <value>SPOR KURSLARI: Spor hakkında her şey</value>
+  </data>
+  <data name="HangiSporlar" xml:space="preserve">
+    <value>Hangi spor dallarında kurslar paylaşıyorsunuz?</value>
+  </data>
+  <data name="HangiSporlarParagraf" xml:space="preserve">
+    <value>Hangi spor dallarında kampanyalar yaptığımız ve kurslar paylaştığımızı Spor Dalları sayfamızdan görüntüleyebilirsiniz. Ayrıca şunu belirtmek isteriz ki, Ekstrem Sport ekibi olarak kampanyalar yaptığımız ve kurslar paylaştığımız spor dallarını genişletmek adına bir çalışma yürütmekteyiz. Pek yakında çok daha fazla spor dalında sizlerle olacağız. Takipte kalınız.</value>
+  </data>
+  <data name="Kampanya" xml:space="preserve">
+    <value>Kampanyalarınızdan yalnızca üyeler mi yararlanabilir?</value>
+  </data>
+  <data name="KampanyaParagraf" xml:space="preserve">
+    <value>Evet, kampanyalarımızdan yararlanak için  üye olmak ve üye girişi yapmış olmak gerekmektedir.</value>
+  </data>
+  <data name="KampanyaSure" xml:space="preserve">
+    <value>Kampanyalarınız süresiz midir?</value>
+  </data>
+  <data name="KampanyaSureParagraf" xml:space="preserve">
+    <value>Kimi kampanyamız süresizdir kimi ise kısıtlı süre içerisinde geçerlidir. Süre bilgisi kampanyalar sayfamızda belirtilir. Kısıtlı sürede geçerli olan kampanyalarımızı kaçırmamak için üye ol maillerinizi takip etmeniz gerekmektedir.</value>
+  </data>
+  <data name="Katki1Aciklama" xml:space="preserve">
+    <value>Bunun en önemli nedeni, egzersizin beyin kan (ve dolayısıyla oksijen) beslemesini güçlendirmesidir. Bu da düşünmek için gereken enerjiyi sağlar. Aynı zamanda nöronların büyümesini teşvik edebilir ve belki de beynin genel sağlığı için çok önemli olan belirli nörotransmitterlerin ve büyüme hormonlarının salınımını artırabilir. Tüm bunlar daha iyi konsantrasyon, zeka ve hafızaya katkıda bulunur.</value>
+  </data>
+  <data name="Katki1Baslik" xml:space="preserve">
+    <value>Spor yapmanın beyin sağlığına pozitif etkisi vardır.</value>
+  </data>
+  <data name="Katki2Aciklama" xml:space="preserve">
+    <value>Spor yapmak iştahı düzenler, aşırı kiloların oluşmasının önüne geçer ve vücuttaki yağ oranını azaltarak kas oranını arttırır. Vücudun dik durma kabiliyetini geliştirir ve dayanıklılığı arttırır. Düzenli beslenme ile birleştiğinde kemik gelişimine önemli katkıda bulunur.</value>
+  </data>
+  <data name="Katki2Baslik" xml:space="preserve">
+    <value>Fiziksel performansınızı geliştirir.</value>
+  </data>
+  <data name="Katki3Aciklama" xml:space="preserve">
+    <value>Düzenli yapacağımız spor aktivitesi kalp damar sistemimiz üzerinde olumlu yönde büyük rol oynamaktadır. Kalp, kas yapısı sisteminde olduğu için kasılma düzeyini maksimize etmek ve böylelikle tüm organizmamıza iyi bir dağılımla kan pompalayabilmek için sportif aktivitelerden vazgeçmemeliyiz. Diğer taraftan yapacağımız fiziksel aktivite kalp damar hastalıkları risk faktörüne karşı iyi bir silah olacaktır; arteriyel hiper tansiyonu minumum seviyede tutar, aterosikleroza karşı iyi bir ilaçtır.</value>
+  </data>
+  <data name="Katki3Baslik" xml:space="preserve">
+    <value>Sağlınız için spor gereklidir.</value>
+  </data>
+  <data name="Katki4Aciklama" xml:space="preserve">
+    <value>Günlük yaşantının içerisinde pek çok olumsuz durum ve yaşamsal zorluk bireylerin stres kaynaklarını oluşturmaktadır. Yapılan çalışmalar sonucunda stresi azaltmak, insanın iyi olma halini artırmak ve sağlıklı olmak için önerilerin başında düzenli fiziksel aktivite gelmektedir. Bedensel ve ruhsal sağlığın korunması için düzenli yapılan aktivite ve egzersizlerin önemi gün geçtikçe artmaktadır.</value>
+  </data>
+  <data name="Katki4Baslik" xml:space="preserve">
+    <value>Stresle başa çıkmanıza yardımcı olur.</value>
+  </data>
+  <data name="Katkilari" xml:space="preserve">
+    <value>Spor yapmanın hayatımıza katkıları</value>
+  </data>
+  <data name="NasilUlasiriz" xml:space="preserve">
+    <value>Size nasıl ulaşabiliriz?</value>
+  </data>
+  <data name="NasilUlasirizParagraf" xml:space="preserve">
+    <value>Bize ulaşmak için iletişim sayfamızdan bize mail atabilir, telefonla arayabilir ya da adresi yazılı ofisimize gelebilirsiniz. Ayrıca bize Twitter  Facebook ve Instagram hesaplarımızdan ulaşabilirsiniz.</value>
+  </data>
+  <data name="Sorulanlar" xml:space="preserve">
+    <value>Sıkça Sorulan Sorular</value>
+  </data>
+  <data name="TumunuGoruntule" xml:space="preserve">
+    <value>Tümünü görüntüle</value>
+  </data>
+</root>

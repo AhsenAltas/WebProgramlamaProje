@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Member> SignInManager
+@inject UserManager<Member> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+
+}
+else
+{
+<b><a asp-area="Identity" asp-page="/Account/Register">Üye Ol</a> | <a asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a></b>
+}

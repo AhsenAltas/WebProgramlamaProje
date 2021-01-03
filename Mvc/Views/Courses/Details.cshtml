@@ -1,0 +1,65 @@
+﻿@model SportProject.Models.Courses
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Courses</h4>
+    <hr />
+    <div class="row">
+
+        <div class="col-md-7">
+            <img class="img-fluid rounded mb-3 mb-md-0" src=@Url.Content(Model.SiteUrl) asp-append-version="true" alt="">
+        </div>
+        <div class="col-md-5">
+            <h3>@Html.DisplayFor(model => model.CourseName)</h3>
+            <h3>@Html.DisplayFor(model => model.Sports.SportName)</h3>
+            <p>@Html.DisplayFor(model => model.InfoCourse)</p>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="top-margin">
+        <div class="row">
+
+
+            <div id='container1' class="col-md-7">
+                <h4 class="page-title">Yorumlar :</h4>
+
+            </div>
+
+            <div class="col-md-5">
+                <textarea placeholder="Yorumunuzu buraya yazınız..." id="bodyText1" required class="form-control" rows="12"></textarea>
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5">
+                    <label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4">
+                    <label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3">
+                    <label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2">
+                    <label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1">
+                    <label for="1">☆</label>
+                </div>
+                <div>
+                    <input class="btn btn-action" id="addComent1" type="submit" value="Gönder" onclick="myFunction()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.CourseId">Edit</a> <br />
+            <a asp-action="Delete"  asp-route-id="@Model.CourseId">Delete</a><br />
+        }
+    }
+    <a asp-action="Index">Back to List</a>
+</div>

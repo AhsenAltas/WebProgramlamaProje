@@ -1,0 +1,96 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+<!-- Header -->
+<header id="head">
+    <div class="container">
+        <div class="row">
+            <h1 class="lead">@localizer["GirisBaslik"]</h1>
+            <p class="tagline">@localizer["GirisParagraf"] <a href="main.html">Ekstrem Sport</a></p>
+
+        </div>
+    </div>
+</header>
+<!-- /Header -->
+<!-- Intro -->
+<div class="container text-center">
+    <br> <br>
+    <h2 class="thin">@localizer["AnaBaslik"]</h2>
+    <p class="text-muted">
+        @localizer["AnaParagraf"]
+    </p>
+</div>
+<!-- /Intro-->
+<!-- Highlights - jumbotron -->
+<div class="jumbotron top-space">
+    <div class="container">
+
+        <h3 class="text-center thin">@localizer["Katkilari"]</h3>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 highlight">
+                <div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>@localizer["Katki1Baslik"]</h4></div>
+                <div class="h-body text-center">
+                    <p>@localizer["Katki1Aciklama"]</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 highlight">
+                <div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>@localizer["Katki2Baslik"]</h4></div>
+                <div class="h-body text-center">
+                    <p> @localizer["Katki2Aciklama"] </p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 highlight">
+                <div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>@localizer["Katki3Baslik"]</h4></div>
+                <div class="h-body text-center">
+                    <p>@localizer["Katki3Aciklama"]</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 highlight">
+                <div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>@localizer["Katki4Baslik"]</h4></div>
+                <div class="h-body text-center">
+                    <p>@localizer["Katki4Aciklama"]</p>
+                </div>
+            </div>
+        </div> <!-- /row  -->
+
+    </div>
+</div>
+<!-- /Highlights -->
+<!-- container -->
+<div class="container">
+
+    <h2 class="text-center top-space">@localizer["Sorulanlar"]</h2>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>@localizer["NasilUlasiriz"]</h3>
+            <p>@localizer["NasilUlasirizParagraf"]</p>
+        </div>
+        <div class="col-sm-6">
+            <h3>@localizer["HangiSporlar"]</h3>
+            <p>
+                @localizer["HangiSporlarParagraf"]
+            </p>
+        </div>
+    </div> <!-- /row -->
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>@localizer["Kampanya"]</h3>
+            <p>
+                @localizer["KampanyaParagraf"]
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <h3>@localizer["KampanyaSure"]</h3>
+            <p>
+                @localizer["KampanyaSureParagraf"]
+            </p>
+        </div>
+    </div> <!-- /row -->
+
+    <div class="jumbotron top-space">
+        <h4>@localizer["Firsatlar"]</h4>
+        <p class="text-right"><a asp-controller="Courses" asp-action="kampanyalar" class="btn btn-primary btn-large">@localizer["TumunuGoruntule"] »</a></p>
+    </div>
+</div>

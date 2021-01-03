@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject SignInManager<Member> SignInManager
+@inject UserManager<Member> UserManager
+
+<ul class="nav navbar-nav pull-right">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li>
+        <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Merhaba @User.Identity.Name!</a>
+    </li>
+    <li>
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="btn btn-action">@localizer["Cikis"]</button>
+        </form>
+    </li>
+}
+else
+{
+    <li>
+        <a class="btn" asp-area="Identity" asp-page="/Account/Register">@localizer["UyeOl"]</a>
+    </li>
+    <li>
+        <a class="btn" asp-area="Identity" asp-page="/Account/Login">@localizer["UyeGirisi"]</a>
+    </li>
+}
+</ul>

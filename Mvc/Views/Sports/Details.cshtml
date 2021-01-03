@@ -1,0 +1,45 @@
+﻿@model SportProject.Models.Sports
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sports</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SportName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SportName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhotoUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InfoSport)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InfoSport)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.SportId">Edit</a> <br />
+            <a  asp-action="Delete" class="btn btn-primary" asp-route-id="@Model.SportId">Delete</a>
+        }
+    }
+
+    <a asp-action="Index">Back to List</a>
+</div>

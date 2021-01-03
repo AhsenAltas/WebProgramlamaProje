@@ -1,0 +1,185 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+<!DOCTYPE html>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Member> SignInManager
+@inject UserManager<Member> UserManager
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+
+    <title>@ViewData["Title"] - Ekstrem Sport</title>
+    <link rel="shortcut icon" href="~/images/logo.png">
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="~/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/rating.css">
+</head>
+<body class="home">
+
+    <!-- /.navbar -->
+    <header id="head" class="secondary">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top headroom">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Button for smallest screens -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="Bla Bla Logo"> <i> EKSTREM SPORT </i></a>
+
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">@localizer["Anasayfa"]</a></li>
+                        <li><a asp-area="" asp-controller="Courses" asp-action="Index">@localizer["Kurslar"]</a></li>
+                        <li class="dropdown">
+                            <a asp-controller="Sports" asp-action="Info" class="dropdown-toggle" data-toggle="dropdown">@localizer["SporDallari"]<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Abseiling">@localizer["Abseiling"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="BungeeJumping">@localizer["BungeeJumping"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Canyoning">@localizer["Kanyoning"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="DagBisikleti">@localizer["DagBisikleti"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Dalis">@localizer["Dalis"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Kampcilik">@localizer["Kampcilik"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Kayak">@localizer["Kayak"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Motokros">@localizer["Motokros"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Rafting">@localizer["Rafting"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Snowboard">@localizer["Snowboard"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Wakeboard">@localizer["Wakeboard"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="YamacParasutu">@localizer["YamacParasutu"]</a></li>
+                                <li><a asp-area="" asp-controller="Sports" asp-action="Info" asp-fragment="Zipline">@localizer["Zipline"]</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-controller="Courses" asp-action="kampanyalar">@localizer["Kampanyalar"]</a></li>
+                        <li><a asp-controller="Home" asp-action="iletisim">@localizer["Iletisim"]</a></li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Paneli <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Courses" asp-action="Create">Kurs Oluştur</a></li>
+                            <li><a asp-controller="Sports" asp-action="Create">Spor Oluştur</a></li>
+                        </ul>
+                    </li>
+                            }
+                         }
+                    <li> <partial name="_LoginPartial" /></li>
+                        <li>
+                            <partial name="_Culture" />
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+
+            </div>
+        </div>
+    </header>
+
+    <div class="home">
+        <main role="main" class="home">
+            <!---->
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer id="footer" class="top-space">
+
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">@localizer["Iletisim"]</h3>
+                        <div class="widget-body">
+                            <p>
+                                +145861451315<br>
+                                <a href="mailto:#">biseybisey@biseybisey.com</a><br>
+                                <br>
+                                @localizer["IletisimParagraf"]
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">@localizer["Indirin"]</h3>
+                        <a href=""> <img src="~/images/appstore.png" alt=""></a>
+                        <a href=""> <img src="~/images/playstore.png" alt=""></a>
+                    </div>
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title"> @localizer["Hakkimizda"]</h3>
+                        <div class="widget-body">
+                            <p>@localizer["HakkimizdaParagraf"]</p>
+                            <h5> @localizer["Ekibimiz"] </h5>
+                            <p>Ahsen Altaş -  Melike Göncü - Emine Karakayalı </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">@localizer["TakipEdin"]</h3>
+                        <div class="widget-body">
+                            <p class="follow-me-icons">
+                                <a href=""><i class="fa fa-twitter fa-2"></i></a>
+                                <a href=""><i class="fa fa-dribbble fa-2"></i></a>
+                                <a href=""><i class="fa fa-github fa-2"></i></a>
+                                <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="simplenav">
+                                <a asp-area="" asp-controller="Home" asp-action="Index">@localizer["Anasayfa"]</a> |
+                                <a asp-controller="Home" asp-action="iletisim">@localizer["Iletisim"]</a> |
+                                <partial name="_LoginFooter" />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="text-right">
+                                <a>  Copyright &copy; 2020, Bu site designed by Ahsen-Melike-Emine</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+        <a href="#" class="yukarikaydir">
+            <img src="~/images/up-arrow.png">
+        </a>
+    </footer>
+
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/comments.js"></script>
+    <script src="~/js/headroom.min.js"></script>
+    <script src="~/js/jQuery.headroom.min.js"></script>
+    <script src="~/js/template.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

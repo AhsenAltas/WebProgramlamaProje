@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-SportProject-00AE3FD0-6CFA-443A-BA92-D19667A128C6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201225232815_mig4.cs" />
+    <Compile Remove="Data\Migrations\20201225232815_mig4.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201228213233_mig7.cs" />
+    <Compile Remove="Data\Migrations\20201228213233_mig7.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201231191938_yenimig.cs" />
+    <Compile Remove="Data\Migrations\20201231191938_yenimig.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201231192711_kurslaryeniden.cs" />
+    <Compile Remove="Data\Migrations\20201231192711_kurslaryeniden.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201231203354_sorunvarmi.cs" />
+    <Compile Remove="Data\Migrations\20201231203354_sorunvarmi.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210101095345_sifrequired.cs" />
+    <Compile Remove="Data\Migrations\20210101095345_sifrequired.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210101095437_sifrequired.cs" />
+    <Compile Remove="Data\Migrations\20210101095437_sifrequired.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210101095601_sifrequired.cs" />
+    <Compile Remove="Data\Migrations\20210101095601_sifrequired.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210101145802_kurssil.cs" />
+    <Compile Remove="Data\Migrations\20210101145802_kurssil.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\kurs\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
